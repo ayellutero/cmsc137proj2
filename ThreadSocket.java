@@ -64,15 +64,16 @@ public class ThreadSocket extends Thread{
 
 			// Print response headers
 			out.println("HTTP/1.0 200 OK");
-            out.println("Content-Type: text/html; charset=utf-8");
-            out.println("Server: Miniwebserver");
-            // this blank line signals the end of the headers
-            out.println("");
+		    	out.println("Content-Type: text/html; charset=utf-8");
+		    	out.println("Server: Miniwebserver");
+		    	// this blank line signals the end of the headers
+		    	out.println("");
 
             // Send request file and save to web server program
             try{
             	PrintStream ps = new PrintStream(new FileOutputStream("HTTPRequestFile.html"));
-
+		
+		// Print on the console
             	out.println("<h3>CMSC 137 Project: Mini-Webserver</h3>");
             	out.println("HTTP Request method: " + reqMethod);
             	out.println("<br>HTTP Header is printed on the console.");
